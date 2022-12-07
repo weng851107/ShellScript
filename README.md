@@ -12,6 +12,7 @@ contact me and the related files will be deleted immediately. Thank you!
 
 - [Introduction](#1)
   - [[shell十三問]](#1.1)
+  - [Difference between Bash Script and Shell Script](#1.2)
 - [學習資源](#2)
   - [菜鳥教程](#2.1)
     - [變量](#2.1.1)
@@ -395,6 +396,10 @@ contact me and the related files will be deleted immediately. Thank you!
 
 - **`until loop`** :
   - 與while相反， until是在return value 為false時進入循環，否則，結束。 
+
+<h2 id="1.2">Difference between Bash Script and Shell Script</h2>
+
+[Difference between Bash Script and Shell Script](https://www.geeksforgeeks.org/bash-script-difference-between-bash-script-and-shell-script/)
 
 <h1 id="2">學習資源</h1>
 
