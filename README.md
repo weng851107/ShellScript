@@ -623,6 +623,12 @@ Shell 傳遞參數實例！
 
    ![Shell_Operators_img00](./image/Shell_Operators_img00.PNG)
 
+- Note: 
+
+    ```Shell
+    OUT_DURATION=$(( IN_DURATION + 1 ))
+    ```
+
 <h4 id="2.1.3.2">2. 關係運算符</h4>
 
 - 只支持數字，不支持字符串，除非字符串的值是數字。
