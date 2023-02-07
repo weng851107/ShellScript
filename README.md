@@ -57,6 +57,7 @@ contact me and the related files will be deleted immediately. Thank you!
     - [sync](#3.1.21)
     - [journalctl︰查詢 systemd 日誌](#3.1.22)
     - [dos2unix & unix2dos](#3.1.23)
+    - [tee](#3.1.24)
   - [單引號('')、雙引號("")，反引號（``）的區別](#3.2)
   - [小括號(), 中括號[], 和大括號{}的區別](#3.3)
   - [常用参数(文件/目錄, 字符串, 邏輯判斷)](#3.4)
@@ -2038,7 +2039,32 @@ unix2dos
 
 - Unix下的文字檔案是以\n作為斷行標誌的，表示成十六進位制就是 0A
 
+<h3 id="3.1.24">tee</h3>
 
+[[Linux] tee 指令：將結果同時輸出到螢幕和檔案](https://www.onejar99.com/linux-command-tee/)
+
+![sh_img00](./image/sh_img00.PNG)
+
+- 將結果同時輸出到螢幕和檔案
+
+- tee 後面帶 `-a` 表示用 append 的方式導到檔案(預設是取代)
+
+    ```bash
+    #!/bin/sh
+
+    CUR_PATH=$PWD
+    LOG="/test.log"
+
+    echo " " | tee $LOG_MEMTESTER
+    echo "--- Test ---" | tee -a $LOG_MEMTESTER
+    date | tee -a $LOG_MEMTESTER
+    ```
+
+stdout 和 stderr 都輸出到螢幕和檔案
+
+```bash
+$ ls xxx 2>&1 | tee result.txt
+```
 
 <h2 id="3.2">單引號('')、雙引號("")，反引號（``）的區別</h2>
 
