@@ -58,6 +58,7 @@ contact me and the related files will be deleted immediately. Thank you!
     - [journalctl︰查詢 systemd 日誌](#3.1.22)
     - [dos2unix & unix2dos](#3.1.23)
     - [tee](#3.1.24)
+    - [xxd](#3.1.25)
   - [單引號('')、雙引號("")，反引號（``）的區別](#3.2)
   - [小括號(), 中括號[], 和大括號{}的區別](#3.3)
   - [常用参数(文件/目錄, 字符串, 邏輯判斷)](#3.4)
@@ -2074,12 +2075,7 @@ The xxd command in Linux lets you create a hexdump or even do the reverse. Follo
 xxd [OPTIONS] [file]
 ```
 
-**Reverse Operation: a hex dump back to binary**
-
-```bash
-$ xxd -r -p inputhexfile.txt output.bin
-$ xxd -r -p inputhexfile.hex output.bin
-```
+注意：這邊xxd將hex轉換bin是指將十六進位轉換成二進位，並不可以將MCU生成的hex檔轉換成bin檔來燒錄，MCU使用的hex檔，通常都是用intel compiler編譯出來的intel hex格式，必須使用hex2bin的執行檔來轉換
 
 Example1: **convert the file contents into hex**
 
