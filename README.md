@@ -1093,6 +1093,12 @@ N may be suffixed by k (x1024), b (x512), or m (x1024^2).
 1. 去除换行：`sed ":a;N;s/\n//g;ta" result`
 2. 去除所有空格 : `sed s/[[:space:]]//g result`
 
+#### 替換掉某個檔案中所有符合的字串
+
+`sed -i 's/hdr_mode = \"linear\",/hdr_mode = \"2x\",/g' /root/cv25_halo_mini_vin0_5M_linear_3_streams.lua`
+
+- 將 `hdr_mode = "linear",` 替換成 `hdr_mode = "2x",`
+
 #### 替換一行中的某部分
 
 - `sed ‘s/要替換的字串/新的字串/g’`
