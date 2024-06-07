@@ -59,6 +59,7 @@ contact me and the related files will be deleted immediately. Thank you!
     - [dos2unix & unix2dos](#3.1.23)
     - [tee](#3.1.24)
     - [xxd](#3.1.25)
+    - [read](#3.1.26)
   - [單引號('')、雙引號("")，反引號（``）的區別](#3.2)
   - [小括號(), 中括號[], 和大括號{}的區別](#3.3)
   - [常用参数(文件/目錄, 字符串, 邏輯判斷)](#3.4)
@@ -2219,6 +2220,17 @@ Example5: **How to make xxd produce binary dump?**
     00000090: 01111100 01011001                                      |Y
     ```
 
+<h3 id="3.1.26">read</h3>
+
+如果你想要將每兩行數據分別存儲到不同的變量中，你可以修改上面提供的代碼來實現這一點。這裡是一個示例代碼：
+
+    ```bash
+    while IFS= read -r line1 && IFS= read -r line2; do
+        var1="$line1"
+        var2="$line2"
+        # 在這裡處理變量 var1 和 var2
+    done < <(cat 某.txt | grep 相關資訊)
+    ```
 
 <h2 id="3.2">單引號('')、雙引號("")，反引號（``）的區別</h2>
 
